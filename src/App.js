@@ -4,6 +4,7 @@ import HomePage from "./pages/homepage/home-page.component";
 import { Route, Link, Switch } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header.component/header.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 
 const HatsPage = (props) => (
   <div>
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/shop/hats" component={HatsPage}></Route>
         <Route path="/hatspage/:topicId" component={Hat}></Route>
         <Route exact path="/shop" component={ShopPage}></Route>
+        <Route path="/signin" component={SignInAndSignUpPage}></Route>
       </Switch>
     </div>
   );
