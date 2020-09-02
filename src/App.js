@@ -5,8 +5,9 @@ import { Route, Link, Switch } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header.component/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import ShopPageTest from "./pages/shop/shop.component-test";
 
-const HatsPage = (props) => (
+/*const HatsPage = (props) => (
   <div>
     <h1>Hats page</h1>
     <button onClick={() => props.history.push("/hatspage/:topicId")}>
@@ -27,11 +28,24 @@ function App() {
     <div>
       <Header></Header>
       <Switch>
-        <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/shop/hats" component={HatsPage}></Route>
         <Route path="/hatspage/:topicId" component={Hat}></Route>
+      </Switch>
+    </div>
+  );
+}
+
+*/
+
+function App() {
+  return (
+    <div>
+      <Header></Header>
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/shop" component={ShopPage}></Route>
         <Route path="/signin" component={SignInAndSignUpPage}></Route>
+        <Route path="/shop/:id" component={ShopPageTest}></Route>
       </Switch>
     </div>
   );
